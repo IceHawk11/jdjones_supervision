@@ -1,9 +1,9 @@
 # JD Jones Supervision Dashboard (AI & Coding Intern Take Home Assignment)
 
 ## This is a prototype for JD Jones Production Tracking and Materials Management Dashboard built with **Vite + React + TypeScript** and currently deployed as a monorepo structure on Render 
----
 
 ## ✅ How to Run Locally
+---
 
 ### Make sure you have installed:
 
