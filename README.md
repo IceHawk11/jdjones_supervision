@@ -1,6 +1,6 @@
-# JD Jones Supervision Dashboard (AI Intern Take Home Assignment)
+# JD Jones Supervision Dashboard (AI & Coding Intern Take Home Assignment)
 
-This is a prototype for JD Jones Production Tracking and Materials Management Dashboard built with **Vite + React + TypeScript**
+## This is a prototype for JD Jones Production Tracking and Materials Management Dashboard built with **Vite + React + TypeScript** and currently deployed as a monorepo structure on Render 
 ---
 
 ## ✅ How to Run Locally
@@ -34,7 +34,7 @@ http://localhost:5000
 ## Scope for More Imporvements
 - Profile setup for custom users compatible with factory workers
 - Connection of database (preferrably MongoDB) to save the contents of the page
-- JWT Authentication setup for the users
+- JWT Authentication setup for the users + Redis for caching
 - Shipment tracker can be implemented to mark the products shipped, showcasing total profit against manufactured
 - OpenCV image recognition technique can be integrated to a camera connected to the loading trucks to mark the number of items loaded or unloaded from trucks instead of manual counting
 
