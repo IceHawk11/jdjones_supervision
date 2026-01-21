@@ -1,21 +1,14 @@
 import express, { type Express } from "express";
-import fs from "fs";
 import path from "path";
 
 export function serveStatic(app: Express) {
-  // ✅ Vite builds into: dist/public
   const distPath = path.resolve(process.cwd(), "dist", "public");
 
-  if (!fs.existsSync(distPath)) {
-    throw new Error(
-      `Could not find the build directory: ${distPath}, make sure to build the client first`,
-    );
-  }
-
+  // ✅ serve static assets
   app.use(express.static(distPath));
 
-  // ✅ SPA fallback
-  app.get("*", (_req, res) => {
+  // ✅ Express v5 safe SPA fallback (NOT "*")
+  app.get("/*", (_req, res) => {
     res.sendFile(path.join(distPath, "index.html"));
   });
 }
