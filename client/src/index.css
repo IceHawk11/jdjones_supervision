@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Industrial Color Palette - High Contrast & Clean */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Oswald', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Base Colors - Industrial Slate */
+  --background: 220 14% 96%;
+  --foreground: 222 47% 11%;
+
+  /* Card / Surfaces */
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  
+  /* Popover */
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+
+  /* Primary Action - Safety Orange / Industrial Blue */
+  --primary: 217 91% 60%;
+  --primary-foreground: 210 40% 98%;
+
+  /* Secondary - Steel Gray */
+  --secondary: 215 16% 47%;
+  --secondary-foreground: 210 40% 98%;
+
+  /* Muted */
+  --muted: 214 32% 91%;
+  --muted-foreground: 215 16% 47%;
+
+  /* Accent - High Vis Yellow/Amber for highlights */
+  --accent: 45 93% 47%;
+  --accent-foreground: 222 47% 11%;
+
+  /* Destructive - Warning Red */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  /* Borders & Inputs */
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Dark Mode - Control Room Style */
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+
+  --card: 217 33% 17%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 217 33% 17%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 217 19% 27%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217 19% 27%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 45 93% 47%;
+  --accent-foreground: 222 47% 11%;
+
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 19% 27%;
+  --input: 217 19% 27%;
+  --ring: 224 76% 48%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-wide uppercase;
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Utilities for Industrial Look */
+@layer components {
+  .industrial-card {
+    @apply bg-card border border-border/50 shadow-md shadow-slate-900/5 hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden;
+  }
+  
+  .industrial-header {
+    @apply bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 shadow-md;
+  }
+
+  .stat-value {
+    @apply font-mono text-3xl font-bold tracking-tight;
+  }
+
+  .status-badge {
+    @apply px-2 py-1 rounded text-xs font-bold uppercase tracking-wider;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
