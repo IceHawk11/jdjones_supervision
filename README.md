@@ -1,7 +1,6 @@
-# JD Jones Supervision Dashboard (Vite + TypeScript + Express)
+# JD Jones Supervision Dashboard (AI Intern Take Home Assignment)
 
-This is a full-stack project built with **Vite + React + TypeScript** for the frontend and **Express** for the backend(not enabled currently).
-
+This is a prototype for JD Jones Production Tracking and Materials Management Dashboard built with **Vite + React + TypeScript**
 ---
 
 ## ✅ How to Run Locally
@@ -11,22 +10,32 @@ This is a full-stack project built with **Vite + React + TypeScript** for the fr
 - **Node.js** (Recommended: Latest LTS)
 - **npm**
 
----
-
 ### 📦 Install Dependencies
 
-Run this command in the project root directory:
+Run this command using terminal in the project root directory:
 
 ```
 npm install
 ```
-Then run
+Then to start the application, run
 ```
 npm run dev
 ```
-to start the application and go to 
+To view the page, simply on the web browser go to 
 
 ```
 http://localhost:5000
 
 ```
+## Current Limitations
+- Backend is not intergrated properly
+- Import/Export CSV files for the materials is not configured
+
+## Scope for More Imporvements
+- Profile setup for custom users compatible with factory workers
+- Connection of database (preferrably MongoDB) to save the contents of the page
+- JWT Authentication setup for the users
+- Shipment tracker can be implemented to mark the products shipped, showcasing total profit against manufactured
+- OpenCV image recognition technique can be integrated to a camera connected to the loading trucks to mark the number of items loaded or unloaded from trucks instead of manual counting
+
+
