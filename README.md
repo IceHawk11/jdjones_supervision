@@ -2,6 +2,9 @@
 
 This is a prototype for JD Jones Production Tracking and Materials Management Dashboard built with **Vite + React + TypeScript** currently deployed as a monorepo structure on **Render** 
 - [Live Link](https://jdjones-supervision.onrender.com/)
+---
+## Dashboard
+![Dashboard](https://github.com/IceHawk11/jdjones_supervision/blob/master/pic/Screenshot%20(926).png)
 
 ## ✅ How to Run Locally
 
